@@ -43,3 +43,15 @@ unit tests test the app from the inside.
 
 python3 manage.py test ==
 run tests written in test.py
+
+resolve is the func that django uses to resolve urls and find what view
+function they should map to.  check that resolve when called with '/' finds
+a function called home_page
+
+httprequest object is what django sees when a users browser asks for a page
+
+response is an instance of a class called httpresponse
+
+the .content of the response are raw bytes. decode() with utf8 to convert to 
+a human readable format
+
