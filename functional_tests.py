@@ -12,7 +12,7 @@ class NewVisitorTest(unittest.TestCase):
     self.browser.quit()
 
   def test_can_start_a_list_and_retrieve_it_later(self):
-    #edith has heard about a cool new online to-do app. she goes to 
+    #edith has heard about a cool new online to-do app. she goes to
     #check out its homepage
     self.browser.get('http://localhost:8000')
     #she notices the page title / header mention to-do lists
@@ -31,14 +31,15 @@ class NewVisitorTest(unittest.TestCase):
 
     table = self.browser.find_element_by_id('id_list_table')
     rows = table.find_elements_by_tag_name('tr')
-    self.assertTrue(any(row.text == '1: Buy peacock feathers' for row in rows))
+    self.assertTrue(any(row.text == '1: Buy peacock feathers' for row in rows),
+    "New to-do item did not appear in table")
 
-    #There is still a text box inviting her to add another item. She 
+    #There is still a text box inviting her to add another item. She
     #enters "use peacock feathers to make a fly" (edith is methodical)
     self.fail('Finish the test!')
     #the page updates again, and now shows both items on her list
     #Edith wonders whether the site will remember her list.  Then she sees that
-    #the site has generated a unique url for her -- there is some 
+    #the site has generated a unique url for her -- there is some
     #explanatory text to that effect
     #she visits the url -- her to-do list is still there
     #satisfied, she goes back to sleep
