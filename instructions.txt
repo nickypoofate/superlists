@@ -1,0 +1,28 @@
+to activate virtual environment:
+
+source virtualenv/bin/activate
+
+to deactivate virtual environment
+
+deactivate
+
+functional_test.py ==
+start selnium webdriver to open a firefox browser window
+open localhost
+check to see it has Django in the title
+
+django-admin.py startproject superlists . ==
+creates file called manage.py and a subfolder called superlists
+superlists is for stuff that applies to the whole project.
+
+manage.py is Django's swiss army knife
+
+python3 manage.py runserver (./manage.py runserver)  ==
+start django server
+
+git init . ==
+start version control with git
+
+.gitignore ==
+ignores files (sql folder, geckodriver, virtual environment)
+(echo "db.sqlite3" >> .gitignore) syntax
