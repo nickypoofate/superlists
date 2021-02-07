@@ -55,3 +55,6 @@ response is an instance of a class called httpresponse
 the .content of the response are raw bytes. decode() with utf8 to convert to 
 a human readable format
 
+git log --oneline to show what you've done
+
+
