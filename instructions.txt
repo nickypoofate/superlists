@@ -57,4 +57,23 @@ a human readable format
 
 git log --oneline to show what you've done
 
+running the django dev server
+	python3 manage.py runserver
+running functional tests
+	python3 functional_tests.py
+running the unit tests
+	python3 manage.py test
 
+the unit-test/code cycle
+	1) run the unit tests in the terminal
+	2) make a minimal code change in the editor
+	3) repeat!
+
+selenium methods: find_element_by_tag_name, find_element_by_id, 
+	find_elements_by_tag_name
+send_keys - seleniums way of typing into input elements
+
+Keys class lets us send special keys
+
+time.sleep makes sure browser has finished loading before we make any assertions
+about the new page. Explicit wait
