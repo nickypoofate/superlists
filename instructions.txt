@@ -88,4 +88,19 @@ django template tags
   csrf_token
   {% for ... endfor %}
 
+to run the functional tests
+  python3 manage.py test functional_tests
 
+to run the unit tests
+  python manage.py test lists
+
+
+Ensure test isolation and manage global state
+  different tests shouldn't affect one another
+
+Avoid 'voodoo' sleeps
+  time.sleep -- the length of time is always a shot in the dark.  either too
+  short, or toow long.  Prefer a retry loop that polls our appand moves on
+  asap
+
+don't rely on selenium's implicit waits.
