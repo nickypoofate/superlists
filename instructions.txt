@@ -77,3 +77,15 @@ Keys class lets us send special keys
 
 time.sleep makes sure browser has finished loading before we make any assertions
 about the new page. Explicit wait
+
+form set up to add new items using POST
+
+simple model in database to save list items
+
+database migrations (python3 manage.py makemigrations) (python3 manage.py migrate)
+
+django template tags
+  csrf_token
+  {% for ... endfor %}
+
+
