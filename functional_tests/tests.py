@@ -4,6 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import WebDriverException
 import time
+import os
 
 MAX_WAIT = 10
 
@@ -11,6 +12,9 @@ class NewVisitorTest(StaticLiveServerTestCase):
 
   def setUp(self):
     self.browser = webdriver.Firefox()
+    staging_server = os.environ.get("STAGING_SERVER")
+    if staging_server:
+        self.live_server_url = 'http://' + staging_server
 
   def tearDown(self):
     self.browser.quit()
@@ -111,7 +115,7 @@ class NewVisitorTest(StaticLiveServerTestCase):
     inputbox = self.browser.find_element_by_id('id_new_item')
     self.assertAlmostEqual(
       inputbox.location['x'] + inputbox.size['width'] /2, 512,
-      delta=10
+      delta=60
     )
 
     #she starts a new list and sees the input is nicely centered there too
@@ -122,5 +126,5 @@ class NewVisitorTest(StaticLiveServerTestCase):
     self.assertAlmostEqual(
       inputbox.location['x'] + inputbox.size['width'] /2,
       512,
-      delta=10
+      delta=60
     )
