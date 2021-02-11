@@ -1,4 +1,9 @@
-<html>
+{% extends 'base.html' %}
+
+{% block header_text %}Start a new To-Do List {% endblock %}
+
+{% block form_action %}/lists/new{% endblock %}
+<!-- <html>
   <head>
     <meta charset="utf-8">
     <title>To-Do Lists</title>
@@ -10,4 +15,4 @@
       {% csrf_token %}
     </form>
   </body>
-</html>
+</html> -->
