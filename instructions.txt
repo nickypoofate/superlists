@@ -104,3 +104,12 @@ Avoid 'voodoo' sleeps
   asap
 
 don't rely on selenium's implicit waits.
+
+Tests take some of the uncertainty out of deployment
+Some typical pain points -- networking, ports, static files, and the database
+Tests allow experiments and incremental works.
+
+using nginx server (sudo apt install nginx, sudo systemctl start nginx) (ip + port
+80 should show default page)
+
+
