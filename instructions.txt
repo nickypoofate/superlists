@@ -113,3 +113,10 @@ using nginx server (sudo apt install nginx, sudo systemctl start nginx) (ip + po
 80 should show default page)
 
 
+Don't use django dev server in production
+
+don't use django to serve your static files
+
+check your settings.py file for dev-only settings
+
+security
